@@ -210,12 +210,14 @@
         }
         model-viewer {
             background: transparent;
+            /* Elakkan model viewer menghalang pergerakan tatal mudah alih */
+            touch-action: pan-y;
         }    
 
         /* Membetulkan masalah ekor huruf (seperti g, p, y, j) terpotong pada teks bercorak gradient Tailwind */
         .bg-clip-text {
-            padding-bottom: 0.2em;
-            margin-bottom: -0.2em; /* Mengimbangi ruang supaya susun atur asal tidak lari */
+            padding-bottom: 0.25em;
+            margin-bottom: -0.25em; /* Mengimbangi ruang supaya susun atur asal tidak lari */
         }
 
         /* Gradient Text (Premium Modern Typography) */
@@ -230,8 +232,8 @@
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
             filter: drop-shadow(0px 4px 8px rgba(139, 92, 246, 0.15));
-            padding-bottom: 0.2em;
-            margin-bottom: -0.2em;
+            padding-bottom: 0.25em;
+            margin-bottom: -0.25em;
         }
 
         /* Premium Border-Card & Flow Animations for Jenis Mata Jahitan */
@@ -468,7 +470,7 @@
                     
                     <!-- Wrapper baru untuk merapatkan tajuk dan tagline -->
                     <div class="space-y-4">
-                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-heading font-black leading-[1.1] tracking-tight text-gray-900">
+                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-heading font-black leading-[1.1] tracking-tight text-gray-900">
                             Kuasai Teknik <br>
                             <span class="text-gradient">Asas Jahitan</span>
                         </h1>
@@ -689,12 +691,12 @@
 
                             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
                                 <!-- Kiri: 3D Model -->
-                                <div class="lg:col-span-5 h-[300px] sm:h-[400px] lg:h-auto">
+                                <div class="lg:col-span-5 h-[280px] sm:h-[400px] lg:h-auto">
                                     <div class="w-full h-full bg-gradient-to-b from-indigo-50/80 to-purple-50/50 rounded-[2.5rem] border border-white relative overflow-hidden shadow-inner flex items-center justify-center">
                                         <div class="absolute top-4 left-4 bg-white/90 border border-gray-100 text-indigo-700 text-xs px-3 py-1.5 rounded-lg flex items-center gap-2 z-20 font-bold backdrop-blur-md shadow-sm">
                                             <i data-lucide="box" class="w-4 h-4"></i> 3D VIEW
                                         </div>
-                                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Model 3D Gunting" camera-controls auto-rotate rotation-per-second="20deg" shadow-intensity="1" exposure="1" class="w-full h-full cursor-grab"></model-viewer>
+                                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Model 3D Gunting" camera-controls auto-rotate rotation-per-second="20deg" shadow-intensity="1" exposure="1" class="w-full h-full cursor-grab" touch-action="pan-y"></model-viewer>
                                     </div>
                                 </div>
 
@@ -761,12 +763,12 @@
 
                             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
                                 <!-- Kiri: 3D Model -->
-                                <div class="lg:col-span-5 h-[300px] sm:h-[400px] lg:h-auto">
+                                <div class="lg:col-span-5 h-[280px] sm:h-[400px] lg:h-auto">
                                     <div class="w-full h-full bg-gradient-to-b from-teal-50/80 to-emerald-50/50 rounded-[2.5rem] border border-white relative overflow-hidden shadow-inner flex items-center justify-center">
                                         <div class="absolute top-4 left-4 bg-white/90 border border-gray-100 text-teal-700 text-xs px-3 py-1.5 rounded-lg flex items-center gap-2 z-20 font-bold backdrop-blur-md shadow-sm">
                                             <i data-lucide="box" class="w-4 h-4"></i> 3D VIEW
                                         </div>
-                                        <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" alt="Model 3D Jarum" camera-controls auto-rotate rotation-per-second="20deg" shadow-intensity="1" exposure="1" class="w-full h-full cursor-grab"></model-viewer>
+                                        <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" alt="Model 3D Jarum" camera-controls auto-rotate rotation-per-second="20deg" shadow-intensity="1" exposure="1" class="w-full h-full cursor-grab" touch-action="pan-y"></model-viewer>
                                     </div>
                                 </div>
 
@@ -832,12 +834,12 @@
 
                             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
                                 <!-- Kiri: 3D Model -->
-                                <div class="lg:col-span-5 h-[300px] sm:h-[400px] lg:h-auto">
+                                <div class="lg:col-span-5 h-[280px] sm:h-[400px] lg:h-auto">
                                     <div class="w-full h-full bg-gradient-to-b from-pink-50/80 to-rose-50/50 rounded-[2.5rem] border border-white relative overflow-hidden shadow-inner flex items-center justify-center">
                                         <div class="absolute top-4 left-4 bg-white/90 border border-gray-100 text-pink-700 text-xs px-3 py-1.5 rounded-lg flex items-center gap-2 z-20 font-bold backdrop-blur-md shadow-sm">
                                             <i data-lucide="box" class="w-4 h-4"></i> 3D VIEW
                                         </div>
-                                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Model 3D Benang" camera-controls auto-rotate rotation-per-second="20deg" shadow-intensity="1" exposure="1" class="w-full h-full cursor-grab"></model-viewer>
+                                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Model 3D Benang" camera-controls auto-rotate rotation-per-second="20deg" shadow-intensity="1" exposure="1" class="w-full h-full cursor-grab" touch-action="pan-y"></model-viewer>
                                     </div>
                                 </div>
 
@@ -903,12 +905,12 @@
 
                             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
                                 <!-- Kiri: 3D Model -->
-                                <div class="lg:col-span-5 h-[300px] sm:h-[400px] lg:h-auto">
+                                <div class="lg:col-span-5 h-[280px] sm:h-[400px] lg:h-auto">
                                     <div class="w-full h-full bg-gradient-to-b from-amber-50/80 to-orange-50/50 rounded-[2.5rem] border border-white relative overflow-hidden shadow-inner flex items-center justify-center">
                                         <div class="absolute top-4 left-4 bg-white/90 border border-gray-100 text-amber-700 text-xs px-3 py-1.5 rounded-lg flex items-center gap-2 z-20 font-bold backdrop-blur-md shadow-sm">
                                             <i data-lucide="box" class="w-4 h-4"></i> 3D VIEW
                                         </div>
-                                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Model 3D Kain" camera-controls auto-rotate rotation-per-second="20deg" shadow-intensity="1" exposure="1" class="w-full h-full cursor-grab"></model-viewer>
+                                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Model 3D Kain" camera-controls auto-rotate rotation-per-second="20deg" shadow-intensity="1" exposure="1" class="w-full h-full cursor-grab" touch-action="pan-y"></model-viewer>
                                     </div>
                                 </div>
 
@@ -939,7 +941,7 @@
                                         <div>
                                             <h4 class="font-heading font-bold text-sky-900 mb-2 text-base">Tahukah Anda?</h4>
                                             <p class="font-sans font-medium text-sky-800 leading-relaxed text-sm">
-                                                Fabrik mempunyai pelbagai jenis seperti kapas, linen, satin dan poliester. Setiap jenis fabrik mempunyai tekstur dan kegunaan yang berbeza.
+                                                Fabrik mempunyai pelbagai jenis seperti kapas, linen, satin dan poliester. Setiap jenis fabrik mempunyai tekstur and kegunaan yang berbeza.
                                             </p>
                                         </div>
                                     </div>
@@ -972,7 +974,7 @@
             <div id="jm-main" class="block fade-in-el pt-12 pb-8">
                 <div class="text-center max-w-4xl mx-auto mb-20 px-4">
                     <span class="px-5 py-2 rounded-full bg-purple-100 text-purple-700 font-heading font-bold text-sm mb-6 inline-block tracking-widest uppercase shadow-sm">Modul 3.1 & 3.2</span>
-                    <h1 class="text-5xl sm:text-6xl font-heading font-black text-gradient mb-6 tracking-tight">Jenis-Jenis Mata Jahitan</h1>
+                    <h1 class="text-4xl sm:text-6xl font-heading font-black text-gradient mb-6 tracking-tight">Jenis-Jenis Mata Jahitan</h1>
                     <p class="text-lg sm:text-xl font-medium text-gray-700 leading-relaxed max-w-3xl mx-auto font-sans">
                         Pilih salah satu kategori mata jahitan di bawah untuk meneroka jenis-jenis jahitan asas secara interaktif.
                     </p>
@@ -1441,7 +1443,7 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-100/50 to-indigo-100/50 opacity-100 transition-opacity duration-500"></div>
                     
                     <!-- Iframe Container -->
-                    <div class="relative z-10 w-full h-[600px] sm:h-[700px] lg:h-[800px] rounded-[2rem] overflow-hidden bg-gray-900 shadow-inner flex items-center justify-center">
+                    <div class="relative z-10 w-full h-[450px] sm:h-[650px] lg:h-[750px] rounded-[2rem] overflow-hidden bg-gray-900 shadow-inner flex items-center justify-center">
                         
                         <!-- Loading Indicator (Shows while iframe loads) -->
                         <div class="absolute inset-0 flex flex-col items-center justify-center bg-purple-50 z-0">
@@ -1452,7 +1454,7 @@
                         <!-- Embedded Game -->
                         <iframe 
                             id="zepGameIframe"
-                            data-src="https://quiz.zep.us/en/play/2NaEq5"
+                            data-src="https://quiz.zep.us/en/play/OvaVNa"
                             src="" 
                             class="w-full h-full border-0 relative z-10" 
                             allow="autoplay; fullscreen; microphone; camera" 
@@ -1465,7 +1467,7 @@
                 <div class="text-center mt-6">
                     <p class="text-sm text-gray-500 font-medium flex items-center justify-center gap-2">
                         <i data-lucide="info" class="w-4 h-4"></i>
-                        Jika permainan tidak dipaparkan dengan betul, <a href="https://quiz.zep.us/en/play/2NaEq5" target="_blank" class="text-purple-600 hover:text-purple-800 transition-colors font-bold underline">klik di sini untuk buka di tab baharu</a>.
+                        Jika permainan tidak dipaparkan dengan betul, <a href="https://quiz.zep.us/en/play/OvaVNa" target="_blank" class="text-purple-600 hover:text-purple-800 transition-colors font-bold underline">klik di sini untuk buka di tab baharu</a>.
                     </p>
                 </div>
             </div>
@@ -1559,7 +1561,7 @@
             <div class="max-w-7xl mx-auto flex flex-col gap-12 fade-in delay-100 px-4 sm:px-6">
                 
                 <!-- Ruang Gambar Profile (Atas - Saiz Full Page Landscape Desktop) -->
-                <div class="w-full flex justify-center h-[350px] sm:h-[500px] lg:h-[650px]">
+                <div class="w-full flex justify-center h-[280px] sm:h-[500px] lg:h-[650px]">
                     <div class="w-full h-full p-4 sm:p-6 rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.12),inset_0_4px_20px_rgba(255,255,255,0.9)] border-2 border-white relative group overflow-hidden flex flex-col items-center justify-center bg-gradient-to-br from-white/60 to-white/20 backdrop-blur-xl">
                         <!-- Latar belakang glowing bila hover -->
                         <div class="absolute inset-0 bg-gradient-to-br from-indigo-200/50 to-purple-200/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -1567,12 +1569,12 @@
                         <!-- Bingkai Ruang Gambar (.PNG) - 3D Solid Border -->
                         <div class="relative z-10 w-full h-full border-[6px] border-white/90 rounded-[2.5rem] flex flex-col items-center justify-center bg-gradient-to-br from-indigo-50/80 to-purple-50/80 group-hover:border-white transition-colors shadow-[0_15px_35px_rgba(0,0,0,0.15),inset_0_10px_25px_rgba(0,0,0,0.05)] overflow-hidden">
                             
-                            <!-- Imej Sebenar (Akan dipaparkan secara automatik jika fail gambar_maklumat.png wujud) -->
+                            <!-- Imej Sebenar -->
                             <img id="upsi-maklumat-img" src="gambar_maklumat.png" alt="Gambar Maklumat Modul" class="absolute inset-0 w-full h-full object-cover z-20 hidden" onload="this.classList.remove('hidden'); document.getElementById('placeholder-maklumat').classList.add('hidden');" onerror="this.classList.add('hidden'); document.getElementById('placeholder-maklumat').classList.remove('hidden');">
 
-                            <!-- Ikon & Teks Placeholder (Akan disembunyikan secara automatik jika gambar di atas berjaya dimuatkan) -->
+                            <!-- Ikon & Teks Placeholder -->
                             <div id="placeholder-maklumat" class="flex flex-col items-center justify-center p-6 text-center z-10">
-                                <i data-lucide="image-plus" class="w-24 h-24 text-indigo-400 mb-6 group-hover:text-indigo-600 transition-colors group-hover:scale-110 transform duration-300 drop-shadow-md"></i>
+                                <i data-lucide="image-plus" class="w-20 h-24 text-indigo-400 mb-6 group-hover:text-indigo-600 transition-colors group-hover:scale-110 transform duration-300 drop-shadow-md"></i>
                                 <span class="text-indigo-500 font-black text-2xl group-hover:text-indigo-700 transition-colors drop-shadow-sm uppercase tracking-wider">
                                     Ruang Gambar Landscape<br><span class="text-base font-semibold opacity-70">Sila namakan fail anda: gambar_maklumat.png</span>
                                 </span>
@@ -1705,7 +1707,7 @@
             
             <!-- Tajuk Utama -->
             <h2 class="text-3xl font-heading font-black bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text drop-shadow-sm mb-2">StitchLab</h2>
-            <p class="text-[9px] sm:text-xs md:text-sm font-bold tracking-widest text-gray-500 uppercase leading-relaxed w-full whitespace-nowrap mx-auto">
+            <p class="text-[8px] xs:text-[10px] sm:text-xs md:text-sm font-bold tracking-widest text-gray-500 uppercase leading-relaxed w-full whitespace-nowrap mx-auto">
                 E-MODUL PEMBELAJARAN ASAS JAHITAN PENDIDIKAN KHAS TINGKATAN 1
             </p>
 
@@ -2061,38 +2063,62 @@
             window.scrollTo({ top: document.getElementById('kuiz').offsetTop, behavior: 'smooth' });
         }
 
-        // Gemini API Logic
-        const apiKey = "AIzaSyCrRuGIJ-azTRVP729MVT6QPOzUKmA7Pcs"; // SILA MASUKKAN API KEY ANDA DI SINI SEBELUM UPLOAD KE GITHUB
-        
-        async function callGeminiAPIWithRetry(prompt, retries = 5) {
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
-            const payload = {
-                contents: [{ parts: [{ text: prompt }] }],
-                systemInstruction: {
-                    parts: [{ 
-                        text: "Anda adalah 'Cikgu AI', seorang guru Pendidikan Khas yang mengajar subjek Asas Jahitan untuk Tingkatan 1 di Malaysia. Jawab dengan gaya mesra, ringkas, mudah difahami, dan beri galakan." 
-                    }]
-                }
-            };
-            const delays = [1000, 2000, 4000, 8000, 16000];
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                    if (!response.ok) {
-                        const errorData = await response.json().catch(() => ({}));
-                        const errMsg = errorData.error?.message || `HTTP ${response.status}`;
-                        throw new Error(errMsg);
-                    }
-                    const result = await response.json();
-                    return result.candidates?.[0]?.content?.parts?.[0]?.text || "Maaf, cikgu tak dapat cari jawapan tu.";
-                } catch (error) {
-                    console.error("Ralat API Gemini (Percubaan " + (i+1) + "):", error);
-                    if (i === retries - 1) {
-                        return `<span class="text-rose-600 font-bold">Ralat Teknikal:</span> ${error.message}.`;
-                    }
-                    await new Promise(res => setTimeout(res, delays[i]));
+        // LOCAL AI CHATBOT KNOWLEDGE BASE (TIADA API KEY DIPERLUKAN)
+        const localKnowledgeBase = [
+            {
+                keywords: ["hai", "hello", "salam", "assalamualaikum", "selamat", "helo"],
+                response: "Hai pelajar! 👋 Saya Cikgu AI. Ada apa-apa soalan tentang jahitan hari ini?"
+            },
+            {
+                keywords: ["gunting", "potong", "memotong"],
+                response: "**Gunting Fabrik** digunakan khusus untuk memotong kain. Ingat pesan cikgu, jangan guna gunting fabrik untuk potong kertas ya, nanti mata gunting cepat tumpul! ✂️"
+            },
+            {
+                keywords: ["jarum", "tajam", "cucuk"],
+                response: "**Jarum Jahit** ada pelbagai saiz mengikut jenis fabrik. Sentiasa pegang dengan cermat dan simpan di tempat yang selamat selepas digunakan. 🪡"
+            },
+            {
+                keywords: ["benang", "putus", "simpul", "ikat"],
+                response: "**Benang** digunakan bersama jarum untuk menyambungkan fabrik. Gunakan panjang benang yang sesuai (kira-kira sepanjang lengan) supaya tidak mudah bersimpul semasa menjahit. 🧵"
+            },
+            {
+                keywords: ["kain", "fabrik", "material"],
+                response: "**Fabrik** atau kain adalah bahan utama kita. Terdapat pelbagai jenis fabrik seperti kapas, sutera dan poliester. Pastikan fabrik diratakan sebelum digunting."
+            },
+            {
+                keywords: ["sementara", "jelujur", "kasar", "panjang pendek"],
+                response: "**Jahitan Sementara** (seperti Jelujur Kasar & Jelujur Panjang Pendek) digunakan untuk menetapkan kedudukan fabrik buat sementara waktu sebelum kita buat jahitan kekal. Boleh buka bahagian 'Jenis Mata Jahitan' untuk tengok video! 📌"
+            },
+            {
+                keywords: ["penyambung", "kia", "mesin", "halus", "cantum"],
+                response: "**Jahitan Penyambung** (seperti Jahitan Kia dan Jahitan Halus) berfungsi untuk menyambungkan dua atau lebih kepingan fabrik agar bercantum dengan amat kukuh. 🔗"
+            },
+            {
+                keywords: ["pengemas", "insang", "pari", "silang", "pangkah", "lilit", "ubi", "tepi kain", "kemas"],
+                response: "**Jahitan Pengemas** (seperti Insang Pari, Silang Pangkah, Lilit Ubi) sangat penting sebagai kemasan akhir bagi mengelakkan tepi kain daripada berbulu atau meretas. 🎀"
+            },
+            {
+                keywords: ["terima kasih", "tq", "tqvm", "mekasih", "baik"],
+                response: "Sama-sama! Teruskan usaha belajar menjahit. Kalau ada soalan lain, tanya je cikgu ya! ✨"
+            },
+            {
+                keywords: ["nama", "cikgu", "siapa"],
+                response: "Nama saya Cikgu AI! Saya dicipta khas untuk membantu pelajar Pendidikan Khas Tingkatan 1 menguasai asas jahitan dengan mudah dan seronok. 🤖"
+            }
+        ];
+
+        function getLocalAIResponse(input) {
+            const lowerInput = input.toLowerCase();
+            
+            // Cari padanan kata kunci
+            for (const item of localKnowledgeBase) {
+                if (item.keywords.some(keyword => lowerInput.includes(keyword))) {
+                    return item.response;
                 }
             }
+            
+            // Jawapan lalai (Fallback) jika tiada padanan
+            return "Maaf, cikgu tak pasti tentang perkara tu. Boleh awak cuba tanya tentang **gunting**, **jarum**, **benang**, **fabrik** atau jenis-jenis **mata jahitan**? Cikgu sedia membantu! 😊";
         }
 
         async function sendAIMessage() {
@@ -2100,9 +2126,11 @@
             const text = inputEl.value.trim();
             if (!text) return;
 
+            // Masukkan soalan pengguna
             appendChatMessage(text, 'user');
             inputEl.value = '';
             
+            // Butang "Tunggu..."
             const btn = document.getElementById('sendAIBtn');
             btn.disabled = true;
             btn.innerHTML = '<span class="animate-pulse">Tunggu...</span>';
@@ -2110,21 +2138,26 @@
             const loadingId = 'loading-' + Date.now();
             appendChatMessage("Sedang berfikir... ✨", 'ai', loadingId);
 
-            const responseText = await callGeminiAPIWithRetry(text);
+            // Simulasi masa berfikir AI (1.5 saat) supaya rasa lebih natural
+            setTimeout(() => {
+                const responseText = getLocalAIResponse(text);
 
-            const loadingEl = document.getElementById(loadingId);
-            if (loadingEl) {
-                loadingEl.innerHTML = formatAIResponse(responseText);
-            } else {
-                appendChatMessage(responseText, 'ai');
-            }
+                const loadingEl = document.getElementById(loadingId);
+                if (loadingEl) {
+                    loadingEl.innerHTML = formatAIResponse(responseText);
+                } else {
+                    appendChatMessage(responseText, 'ai');
+                }
 
-            btn.disabled = false;
-            btn.innerHTML = 'Hantar <i data-lucide="send" class="w-4 h-4"></i>';
-            lucide.createIcons();
-            
-            const chatHistory = document.getElementById('chatHistory');
-            chatHistory.scrollTop = chatHistory.scrollHeight;
+                // Kembalikan butang asal
+                btn.disabled = false;
+                btn.innerHTML = 'Hantar <i data-lucide="send" class="w-4 h-4"></i>';
+                lucide.createIcons();
+                
+                // Tatal ke bawah
+                const chatHistory = document.getElementById('chatHistory');
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+            }, 1500);
         }
 
         function appendChatMessage(text, sender, id = null) {
@@ -2152,10 +2185,8 @@
         }
 
         function formatAIResponse(text) {
-            if (text.includes("Ralat Teknikal")) return text;
             let html = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-purple-700">$1</strong>');
             html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
-            html = html.replace(/\* (.*?)(?=\n|$)/g, '<li class="ml-4 list-disc marker:text-purple-400">$1</li>'); 
             html = html.replace(/\n/g, '<br>');
             return html;
         }
